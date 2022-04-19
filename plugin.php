@@ -20,7 +20,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
  */
-function block_test_text_block_init() {
-	register_block_type_from_metadata( __DIR__ );
+function block_test_text_block_block_init() {
+	register_block_type( __DIR__ );
 }
-add_action( 'init', 'block_test_text_block_init' );
+add_action( 'init', 'block_test_text_block_block_init' );
