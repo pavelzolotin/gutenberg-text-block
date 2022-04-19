@@ -1,0 +1,17 @@
+{
+	"apiVersion": 2,
+	"name": "block-test/text-block",
+	"title": "Text Block",
+	"category": "text",
+	"icon": "text-page",
+	"description": "A block of text.",
+	"keywords": [ "text", "paragraph" ],
+	"supports": {
+		"html": false,
+		"align": [ "wide" ]
+	},
+	"textdomain": "text-block",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
