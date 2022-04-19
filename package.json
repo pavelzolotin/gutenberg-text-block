@@ -36,9 +36,10 @@
 		"@wordpress/blob": "^3.5.0",
 		"@wordpress/block-editor": "^8.4.0",
 		"@wordpress/blocks": "^11.4.0",
-		"@wordpress/components": "^19.7.0",
+		"@wordpress/components": "^19.8.0",
 		"@wordpress/data": "^6.5.0",
 		"@wordpress/element": "^4.3.0",
-		"@wordpress/i18n": "^4.5.0"
+		"@wordpress/i18n": "^4.5.0",
+		"classnames": "^2.3.1"
 	}
 }

@@ -1,10 +1,21 @@
-import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
+import classnames from 'classnames';
 
-export default function save() {
+export default function save({ attributes }) {
+	const { text, textAlignment, shadow, shadowOpacity } = attributes;
+
+	const classes = classnames(`text-block-align-${textAlignment}`, {
+		'has-shadow': shadow,
+		[`shadow-opacity-${shadowOpacity}`]: shadow && shadowOpacity,
+	});
+
 	return (
-		<p {...useBlockProps.save()}>
-			{__('Hello from the saved new block!', 'text-block')}
-		</p>
+		<RichText.Content
+			{...useBlockProps.save({
+				className: classes,
+			})}
+			tagName="p"
+			value={text}
+		/>
 	);
 }
