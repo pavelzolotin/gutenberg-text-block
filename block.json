@@ -9,11 +9,7 @@
 	"keywords": ["text", "paragraph"],
 	"supports": {
 		"html": false,
-		"color": {
-			"background": true,
-			"text": true,
-			"gradients": true
-		},
+		"color": false,
 		"spacing": {
 			"padding": true
 		}
@@ -64,6 +60,12 @@
 		"textColor": {
 			"type": "string",
 			"default": "gray"
+		},
+		"customBackgroundColor": {
+			"type": "string"
+		},
+		"customTextColor": {
+			"type": "string"
 		},
 		"gradient": {
 			"type": "string"
