@@ -55,11 +55,11 @@
 		},
 		"backgroundColor": {
 			"type": "string",
-			"default": "yellow"
+			"default": ""
 		},
 		"textColor": {
 			"type": "string",
-			"default": "gray"
+			"default": ""
 		},
 		"customBackgroundColor": {
 			"type": "string"
