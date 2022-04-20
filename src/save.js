@@ -13,8 +13,6 @@ export default function save({ attributes }) {
 		textColor,
 		customBackgroundColor,
 		customTextColor,
-		shadow,
-		shadowOpacity,
 	} = attributes;
 
 	const backgroundClass = getColorClassName(
@@ -24,12 +22,7 @@ export default function save({ attributes }) {
 
 	const textClass = getColorClassName('color', textColor);
 
-	const classes = classnames(`text-block-align-${textAlignment}`, {
-		'has-shadow': shadow,
-		[`shadow-opacity-${shadowOpacity}`]: shadow && shadowOpacity,
-		[textClass]: textClass,
-		[backgroundClass]: backgroundClass,
-	});
+	const classes = classnames(`text-block-align-${textAlignment}`);
 
 	return (
 		<RichText.Content

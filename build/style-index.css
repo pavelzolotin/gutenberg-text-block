@@ -23,21 +23,6 @@ header h1 {
 .wp-block-block-test-text-block.is-style-rounded {
   border-radius: 10px;
 }
-.wp-block-block-test-text-block.has-shadow {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-.wp-block-block-test-text-block.has-shadow.shadow-opacity-10 {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-.wp-block-block-test-text-block.has-shadow.shadow-opacity-20 {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-.wp-block-block-test-text-block.has-shadow.shadow-opacity-30 {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-.wp-block-block-test-text-block.has-shadow.shadow-opacity-40 {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-}
 .wp-block-block-test-text-block.text-block-align-right {
   text-align: right;
 }

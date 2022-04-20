@@ -9,10 +9,7 @@
 	"keywords": ["text", "paragraph"],
 	"supports": {
 		"html": false,
-		"color": false,
-		"spacing": {
-			"padding": true
-		}
+		"color": false
 	},
 	"styles": [
 		{
@@ -27,8 +24,7 @@
 	],
 	"example": {
 		"attributes": {
-			"text": "This is some text",
-			"shadow": true
+			"text": "This is some text"
 		}
 	},
 	"textdomain": "text-block",
@@ -44,14 +40,6 @@
 		"textAlignment": {
 			"type": "string",
 			"default": "left"
-		},
-		"shadow": {
-			"type": "boolean",
-			"default": false
-		},
-		"shadowOpacity": {
-			"type": "number",
-			"default": 30
 		},
 		"backgroundColor": {
 			"type": "string",
@@ -69,19 +57,6 @@
 		},
 		"gradient": {
 			"type": "string"
-		},
-		"style": {
-			"type": "object",
-			"default": {
-				"spacing": {
-					"padding": {
-						"top": "50px",
-						"right": "50px",
-						"bottom": "50px",
-						"left": "50px"
-					}
-				}
-			}
 		}
 	}
 }

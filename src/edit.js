@@ -9,16 +9,8 @@ import {
 	ContrastChecker,
 	withColors,
 } from '@wordpress/block-editor';
-import {
-	// eslint-disable-next-line @wordpress/no-unsafe-wp-apis
-	__experimentalBoxControl as BoxControl,
-	PanelBody,
-	RangeControl,
-} from '@wordpress/components';
 import classnames from 'classnames';
 import './editor.scss';
-
-const { __Visualizer: BoxControlVisualizer } = BoxControl;
 
 function Edit(props) {
 	const {
@@ -29,7 +21,7 @@ function Edit(props) {
 		setBackgroundColor,
 		setTextColor,
 	} = props;
-	const { text, textAlignment, style, shadow, shadowOpacity } = attributes;
+	const { text, textAlignment } = attributes;
 
 	const onChangeAlignment = (newAlignment) => {
 		setAttributes({ textAlignment: newAlignment });
@@ -38,18 +30,7 @@ function Edit(props) {
 		setAttributes({ text: newText });
 	};
 
-	const onChangeShadowOpacity = (newShadowOpacity) => {
-		setAttributes({ shadowOpacity: newShadowOpacity });
-	};
-
-	const toggleShadow = () => {
-		setAttributes({ shadow: !shadow });
-	};
-
-	const classes = classnames(`text-block-align-${textAlignment}`, {
-		'has-shadow': shadow,
-		[`shadow-opacity-${shadowOpacity}`]: shadow && shadowOpacity,
-	});
+	const classes = classnames(`text-block-align-${textAlignment}`);
 
 	return (
 		<>
@@ -76,30 +57,9 @@ function Edit(props) {
 						textColor={textColor.color}
 						backgroundColor={backgroundColor.color}
 					/>
-					{shadow && (
-						<PanelBody title={__('Shadow Setting', 'text-block')}>
-							<RangeControl
-								label={__('Shadow Opacity', 'text-block')}
-								value={shadowOpacity}
-								min={10}
-								max={40}
-								step={10}
-								onChange={onChangeShadowOpacity}
-							/>
-						</PanelBody>
-					)}
 				</PanelColorSettings>
 			</InspectorControls>
-			<BlockControls
-				controls={[
-					{
-						icon: 'admin-page',
-						title: __('Shadow', 'text-block'),
-						onClick: toggleShadow,
-						isActive: shadow,
-					},
-				]}
-			>
+			<BlockControls>
 				<AlignmentToolbar
 					value={textAlignment}
 					onChange={onChangeAlignment}
@@ -121,12 +81,6 @@ function Edit(props) {
 					placeholder={__('Your Text', 'text-block')}
 					tagName="p"
 					allowedFormats={[]}
-				/>
-				<BoxControlVisualizer
-					values={style && style.spacing && style.spacing.padding}
-					showValues={
-						style && style.visualizers && style.visualizers.padding
-					}
 				/>
 			</div>
 		</>
